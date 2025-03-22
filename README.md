@@ -1,225 +1,197 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Landing Page for a Productivity App</title>
+        <title>Portfolio Website</title>
         <style>
-            body{
-                background:lightgray;
-                font-family: Arial, Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
-                font-weight: bold;
+            html{
                 scroll-behavior: smooth;
             }
+            body{
+                margin: 0px;
+                font-family: 'Poppins';
+            }
             header{
+                background:green;
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: white;
-                background:rgb(103, 1, 1);
-                height:300px;
             }
             header h1{
-                font-size: 40px;
-            }
-            header h2{
-                font-size:20px;
-                text-align: center;
-            }
-            header button{
-                border: 0;
-                padding:15px;
-                margin-top: 10px;
-                margin-left:35%;
-                color: black;
-                background: linear-gradient(to right, #f9c559, #ff7e5f);
-                border-radius: 30px;
-                font-size:17px;
+                height:120px;
+                color: white;
+                font-size:55px;
+                font-family:Arial, Helvetica, sans-serif;
                 font-weight: bold;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
+                letter-spacing: 2px;
+                box-sizing: border-box;
             }
-            header button:hover{
-                transform: scale(1.02);
-                background: linear-gradient(to right, #ff7e5f, #f9c559);
+
+
+            .navigations-links{
+                margin-top: -20px;
+                font-size:20px;
             }
-            /* #box1 , #box2 , #box3 {
+            .navigations-links ul{
+                background: #00E676;
                 display: flex;
-                flex-direction: row;
-            } */
+                gap:20px;
+                justify-content: center;
+                list-style: none;
+            }
+            .navigations-links ul li{
+                padding:25px;
+            }
+            .navigations-links ul li a{
+                position:relative;
+                font-weight: bold;
+                color: black;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }
+            .navigations-links ul li a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0;
+                height: 3px;
+                background: green;
+                transition: width 0.3s ease-in-out;
+            }
+            .navigations-links ul li a:hover {
+                color: green;
+            }
+            .navigations-links ul li a:hover::after {
+    width: 100%;
+}
+
 
             main h1{
-                text-align: center;
-                font-weight: 900;
-                font-size: 40px;
-                letter-spacing: 1px;
-                background:; 
-            }
-
-            #feature h2{
-                font-size:30px;
-                text-align: center;
-            }
-            #feature p{
-                font-size:18px;
-                text-align: center;
-            }
-
-            #boxes{
-                display:flex;
-                justify-content:space-evenly;
-                gap:20px;
-                margin: 10px;
-            }
-            .box1{
-                border:4px solid rgb(103, 1, 1);
-                border-radius: 30px;
-                background:wheat;
-                height: 200px;
-                display: flex;
-                flex-direction: column;
-                letter-spacing:2px;
-                padding:20px;
-                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
-            }
-            .box1:hover{
-                transform: scale(1.02);
-            }
-            .box2{
-                border:4px solid rgb(103, 1, 1);
-                border-radius: 30px;
-                background:wheat;
-                height: 200px;
-                display: flex;
-                flex-direction: column;
-                letter-spacing:2px;
-                padding:20px;
-                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
-            }
-            .box2:hover{
-                transform: scale(1.02);
-            }
-            .box3{
-                border:4px solid rgb(103, 1, 1);
-                border-radius: 30px;
-                background:wheat;
-                height: 200px;
-                display: flex;
-                flex-direction: column;
-                letter-spacing:2px;
-                padding:20px;
-                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
-            }
-            .box3:hover{
-                transform: scale(1.02);
-            }
-
-            #user-section .para{
-                height: 200px;
-                margin: 10px;
-                background:wheat;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border:5px solid rgb(103, 1, 1);  
-                border-radius: 30px;
-                /* box-shadow: 5px 5px 7px #f9c559; */
-                letter-spacing:1px;
-                font-size:18px;
-                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
-            }
-            #user-section .para:hover{
-                transform: scale(1.02);
-            }
-
-            .p-section{
-                margin: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content:space-evenly;
-                align-items: center;
-                letter-spacing:3px;
-                font-size:25px;
-                border: 5px solid rgb(103, 1, 1);
-                border-radius: 30px;
-                background:wheat;
-                height:250px;
-                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
-            }
-            .p-section:hover{
-                transform: scale(1.02);
-            }
-            .p-section a{
-                color:maroon;
-                list-style: none;
-                text-decoration: none;
-            }
-
-            footer{
                 color: white;
-                background: rgb(103, 1, 1) ;
-                height:80px;
-                font-size:20px;
+                background: black;
+                text-align: center;
+                padding:15px;
+                margin-top: -20px;
+                font-size:35px;
+                cursor: pointer;
+            }
+            main p {
+                font-size: 20px;
+            }
+
+            #hero, #about, #services, #contact {
+                padding: 20px;
+                border-radius: 10px;
+                transition: transform 0.3s ease-in-out ,0.3s ease-in-out;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            #hero:hover, #about:hover, #services:hover, #contact:hover {
+                transform: scale(1.02);
+                background: #e0e0e0;
+            }
+
+            #hero{
+                height: 230px;
+                margin-top:-10px;
+                border: 2px solid black;
+                background: lightgray;
+            }
+            #about{
+                height: 230px;
+                margin-top:10px;
+                border: 2px solid black;
+                background: lightgray;
+            }
+            #services{
+                height: 200px;
+                margin-top:10px;
+                border: 2px solid black;
+                background: lightgray;
+            }
+
+            #contact{
+                height:150px;
+                margin-top:10px;
+                border: 2px solid black;
+                background: lightgray;
+            }
+            #contact p{
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+
+            #footer{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                letter-spacing: 2px;
+                border: 2px solid black;
+                margin-top: 10px;
+                box-sizing: border-box;
+                padding: 20px;
+                font-size: 18px;
+                font-weight: bold;
+                background: #00E676;
+                color: black;
+                text-align: center;
             }
         </style>
     </head>
-    <body>
-        <header>
+        <body>
+            <header>
+                <h1>SYED SAHIL</h1>
+                </header>
+                <div class="navigations-links">
+                    <ul>
+                        <li ><a href="#about">About</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#footer">Footer</a></li>
+                    </ul>
+                </div>
+            
+            <main>
             <div id="hero">
-                <h1>Boost Your Productivity with Ease</h1>
-                <h2>Organize tasks, set goals, and achieve more—effortlessly!</h2>
-                <button>Get Started for Free</button>
-            </div>
-        </header>
-
-        <main>
-            <div id="feature">
-                <h1>Features</h1>
-            <div id="boxes">
-                <div class="box1">
-                <h2>Smart Task Management</h2>
-                <p>Plan and track tasks effectively</p>
-                </div>
-
-                <div class="box2">
-                <h2>Seamless Integration</h2>
-                <p>Connect with your favorite apps smoothly.</p>
-                </div>
-
-                <div class="box3">
-                <h2>Analytics & Reports</h2>
-                <p>Gain insights into your productivity.</p>
-                </div>
-            </div>
+                <h1>Welcome to My Portfolio</h1>
+                <p>
+                Hi, I'm Sahil , a self-taught web developer with 3 years of experience in HTML and CSS. I create 
+                clean, responsive websites and offer web development services on Fiverr. Passionate about UI/UX, I'm 
+                always learning and improving my skills.
+                </p>
+                
             </div>
 
-            <div id="user-section">
-                <h1>What Our Users Say</h1>
-            <div class="para">
-                <p>This app transformed the way I work! - Alex</p>
-                <p>Highly recommend for teams and individuals. - Sarah</p>
-            </div>
+            <div id="about">
+                <h1>About Me</h1>
+                <p>I have 3 years of self-taught experience in web development, specializing in HTML and CSS to create
+                    clean, responsive, and user-friendly websites. I have worked on various projects, focusing on modern
+                    designs and efficient layouts. I offer web development services on Fiverr, helping clients build
+                    professional and visually appealing websites. My expertise lies in crafting well-structured web
+                    pages with a strong emphasis on UI/UX principles, ensuring a smooth user experience. I am 
+                    constantly learning and improving my skills to stay updated with the latest trends in web development.
+                    </p>
             </div>
 
-            <div id="pricing">
-                <h1>Choose Your Plan</h1>
-            <div class="p-section">
-                <div class="sec1"><a href="">Free Plan - Basic Features</a></div>
-                <div class="sec2"><a href="">Pro Plan - Advanced tools</a></div>
-                <div class="sec3"><a href="">Business Plan - Full suite</a></div>
+
+            <div id="services">
+                <h1>Services</h1>
+                <p>I offer professional web development services specializing in HTML and CSS to create clean, 
+                    responsive, and user-friendly websites. Whether you need a landing page, business website,
+                    or portfolio, I ensure a visually appealing and well-structured design. My focus is on modern
+                    UI/UX principles, making websites both attractive and easy to navigate.
+                    </p>
             </div>
+
+            <div id="contact">
+                <h1>Contact Me</h1>
+                <p>Email:syedsahiltanveer@gmail.com</p>
             </div>
+            
         </main>
 
         <footer>
-            <div id="social-media-links"></div>
-            <div id="contact information">syedsahiltanveer@gmail.com</div>
-            <div id="Copyright">© 2025 Syed Sahil. All rights reserved.</div>
+            <div id="footer">© 2025 Syed Sahil. All rights reserved.</div>
         </footer>
-    </body>
+        </body>
 </html>
