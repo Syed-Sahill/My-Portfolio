@@ -136,6 +136,36 @@
                 color: black;
                 text-align: center;
             }
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 32px;
+                }
+                main h1 {
+                    font-size: 24px;
+                }
+                main p {
+                    font-size: 16px;
+                }
+                section {
+                    max-width: 95%;
+                }
+            }
+            @media (max-width: 480px) {
+                header h1 {
+                    font-size: 26px;
+                }
+                .navigations-links ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                main h1 {
+                    font-size: 20px;
+                }
+                main p {
+                    font-size: 14px;
+                }
+            }
         </style>
     </head>
         <body>
